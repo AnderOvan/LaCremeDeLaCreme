@@ -1,0 +1,44 @@
+.fondo{
+    background-color: bisque;
+}
+
+.Titulo_central{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px black;
+}
+
+.Imagen_principal {
+    width: 100%;
+    display: block;
+}
+
+.Introduccion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    font-size: 20px;
+    color: #ffffff;
+
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cursiva{
+    font-size: 20px;
+    font-style: italic;
+    color: #000;
+}
+
