@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - La Creme De La Creme</title>
+    <!-- Hoja de estilos global -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO / NAVEGACIÓN -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo La Creme De La Creme">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                <a href="carrito.html" class="cart-icon" aria-label="Ver carrito de compras">
+                    🛒 <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ENCABEZADO DE LA SECCIÓN -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Novedades y Recetas</h1>
+            <p>Historias, consejos de repostería y los secretos detrás de nuestros mejores pasteles.</p>
+        </div>
+    </section>
+
+    <!-- GRILLA DE ENTRADAS DEL BLOG -->
+    <main class="blog-section container">
+        <div class="blog-grid">
+
+            <!-- Entrada 1 -->
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="img/blog/noticia-1.jpg" alt="Secretos de la Repostería Artesanal">
+                    <span class="blog-category">Consejos</span>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">📅 12 de Marzo, 2026</span>
+                    <h2>Los 5 Secretos para un Bizcocho Perfecto y Esponjoso</h2>
+                    <p>Descubre los trucos de nuestros chefs pasteleros para lograr que tus tortas siempre mantengan la humedad y soltura ideal.</p>
+                    <a href="detalle-blog-1.html" class="btn-read-more">Leer noticia completa &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Entrada 2 -->
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="img/blog/noticia-2.jpg" alt="Línea Saludable y Sin Azúcar">
+                    <span class="blog-category">Novedades</span>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">📅 28 de Febrero, 2026</span>
+                    <h2>Lanzamiento de Nuestra Línea Saludable y Vegan</h2>
+                    <p>Ampliamos nuestra carta con opciones 100% vegetales y endulzadas naturalmente. Te contamos los ingredientes seleccionados.</p>
+                    <a href="detalle-blog-2.html" class="btn-read-more">Leer noticia completa &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Entrada 3 (Opcional para completar maquetación) -->
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="img/blog/noticia-3.jpg" alt="Maridaje de Pasteles y Café">
+                    <span class="blog-category">Cultura Dulce</span>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">📅 15 de Febrero, 2026</span>
+                    <h2>Cómo Maridar Tus Postres Preferidos con Café de Especialidad</h2>
+                    <p>Guía rápida para combinar sabores intensos de cacao, frutas ácidas y cremas con el tostado perfecto de café.</p>
+                    <a href="detalle-blog-1.html" class="btn-read-more">Leer noticia completa &rarr;</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>La Creme De La Creme</h3>
+                <p>Calidad y sabor en cada receta.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-home.html">Acceso Administrativo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal 123, Santiago</p>
+                <p>📧 contacto@duoc.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 La Creme De La Creme. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Sincronización del contador del carrito -->
+    <script src="js/carrito.js"></script>
+</body>
+</html>
