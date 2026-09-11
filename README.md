@@ -69,4 +69,79 @@ Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantenga
 
 *Ten presente que la fecha límite de entrega en la plataforma AVA es el **lunes 14 de septiembre de 2026 antes de las 11:00 AM**, y la entrega en AVA es estrictamente **individual** registrando el enlace del repositorio y del video. En la Semana 06 se realizará la interrogación escrita donde cada uno responderá sobre su código.*
 
-🧁 ¿Te gustaría que preparemos el archivo `js/regiones-comunas.js` o el código base para la validación del RUN y correos restringidos?
+### 1. Páginas HTML que requieren JavaScript (`.js`)
+
+De acuerdo con la pauta y los diagramas oficiales del proyecto, las páginas que incluyen **formularios con validaciones** o **lógica dinámica** (carrito, catálogo y combos dependientes) son:
+
+#### **Vistas de la Tienda Pública**
+* **`registro.html`**: Requiere JS para validar el RUN (sin puntos ni guión, de 7 a 9 caracteres), correo con dominios permitidos (`@duoc.cl`, `@profesor.duoc.cl`, `@gmail.com`), contraseña, dirección y la carga dinámica de regiones y comunas.
+* **`login.html`**: Requiere JS para validar el formato de correo permitido y que la contraseña tenga entre 4 y 10 caracteres.
+* **`contacto.html`**: Requiere JS para validar los campos obligatorios de nombre, correo permitido y comentario (máximo 500 caracteres).
+* **`productos.html`**: Requiere JS para **renderizar dinámicamente** el listado de pasteles desde un arreglo de objetos y ejecutar la función de agregar productos al carrito.
+* **`detalle-producto.html`**: Requiere JS para obtener el producto seleccionado y permitir añadir la cantidad deseada al carrito.
+* **`carrito.html`**: Requiere JS para la lógica de modificar cantidades, eliminar productos, calcular totales y **conservar la información mediante `localStorage`** (`JSON.stringify` y `JSON.parse`).
+
+#### **Vistas del Área Administrativa**
+* **`admin-nuevo-producto.html` / `admin-editar-producto.html`**: Requieren JS para validar el código de producto (mínimo 3 caracteres), nombre, precio (mínimo 0), stock (entero), stock crítico y categoría obligatoria.
+* **`admin-nuevo-usuario.html` / `admin-editar-usuario.html`**: Requieren JS para validar RUN, nombres, apellidos, correo restringido, tipo de usuario (rol), dirección y la selección interactiva de región y comuna.
+
+---
+
+### 2. Páginas HTML que NO requieren JavaScript (Estáticas)
+
+Estas páginas corresponden a secciones meramente informativas o paneles de visualización simple, por lo que **no necesitan un script propio**:
+* **`index.html`** (Página principal/Home)
+* **`nosotros.html`** (Información de la pastelería)
+* **`blog.html`**, **`detalle-blog-1.html`** y **`detalle-blog-2.html`** (Noticias de la tienda)
+* **`admin-home.html`** (Panel principal del administrador)
+* **`admin-productos.html`** y **`admin-usuarios.html`** (Tablas estáticas de consulta)
+
+*(Nota: Opcionalmente se puede vincular `carrito.js` en el encabezado de las páginas estáticas si desean actualizar el contador de productos del icono del carrito de forma global).*
+
+---
+
+### 3. Organización recomendada de archivos en el repositorio
+
+Para mantener una estructura limpia, colaborativa y sin conflictos en GitHub, se sugiere organizar el proyecto de la siguiente manera:
+
+```text
+pasteleria-dss/
+│
+├── css/
+│   └── styles.css                   # Hoja de estilos global y responsiva
+│
+├── js/
+│   ├── carrito.js                   # Arreglo de productos, lógica del carrito y localStorage
+│   ├── validaciones-tienda.js       # Validaciones para Registro, Login y Contacto
+│   ├── validaciones-admin.js        # Validaciones para formularios de Productos y Usuarios
+│   └── regiones-comunas.js          # Arreglo complementario con regiones y comunas
+│
+├── img/                             # Logos, imágenes de pasteles y entradas del blog
+│   ├── logo.png
+│   ├── productos/
+│   └── blog/
+│
+│   # --- VISTAS TIENDA PÚBLICA ---
+├── index.html                       # Página principal
+├── productos.html                   # Catálogo de productos (usa carrito.js)
+├── detalle-producto.html            # Detalle del producto (usa carrito.js)
+├── carrito.html                     # Carrito de compras (usa carrito.js)
+├── registro.html                    # Formulario de registro (usa validaciones-tienda.js y regiones-comunas.js)
+├── login.html                       # Formulario de login (usa validaciones-tienda.js)
+├── contacto.html                    # Formulario de contacto (usa validaciones-tienda.js)
+├── nosotros.html                    # Quiénes somos
+├── blog.html                        # Seccion de noticias
+├── detalle-blog-1.html              # Noticia 1
+├── detalle-blog-2.html              # Noticia 2
+│
+│   # --- VISTAS ADMINISTRADOR ---
+├── admin-home.html                  # Dashboard del administrador
+├── admin-productos.html             # Listado/Tabla de productos
+├── admin-nuevo-producto.html        # Crear producto (usa validaciones-admin.js)
+├── admin-editar-producto.html       # Editar producto (usa validaciones-admin.js)
+├── admin-usuarios.html              # Listado/Tabla de usuarios
+├── admin-nuevo-usuario.html         # Crear usuario (usa validaciones-admin.js y regiones-comunas.js)
+└── admin-editar-usuario.html        # Editar usuario (usa validaciones-admin.js y regiones-comunas.js)
+```
+
+🧁 ¿Deseas que preparemos las reglas de validación específicas en código JS para el formulario de registro de usuario o las funciones base para guardar y leer el carrito en `localStorage`?
