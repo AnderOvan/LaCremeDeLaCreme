@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Creme De La Creme - Inicio</title>
+    <!-- Hoja de estilos global -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO / NAVEGACIÓN -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo La Creme De La Creme">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                <a href="carrito.html" class="cart-icon" aria-label="Ver carrito de compras">
+                    🛒 <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO / BIENVENIDA -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Bienvenidos a Pastelería La Creme De La Creme</h1>
+            <p>Endulzamos tus momentos especiales con la mejor repostería artesanal.</p>
+            <a href="productos.html"  class="btn btn-hero" height = 300>Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CATEGORÍAS O DESTACADOS -->
+<section class="featured-categories container">
+    <h2>Nuestras Especialidades</h2>
+    <div class="grid-categories">
+        
+        <!-- Tarjeta 1 -->
+        <div class="category-card">
+            <div class="card-carousel" data-images="img/productos/tortas.jpg, img/productos/tortas-2.jpg, img/productos/tortas-3.jpg,img/productos/tortas-4.jpg,img/productos/tortas-5.jpg">
+                <img src="img/productos/tortas.jpg" alt="Tortas Tradicionales" class="carousel-img">
+                <button class="prev-btn" aria-label="Imagen anterior">&#10094;</button>
+                <button class="next-btn" aria-label="Siguiente imagen">&#10095;</button>
+            </div>
+            <h3>Tortas Tradicionales</h3>
+            <p>Las recetas de siempre con el mejor sabor hogareño.</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="category-card">
+            <div class="card-carousel" data-images="img/productos/postres.jpg, img/productos/postres-2.jpg, img/productos/postres-3.jpg,img/productos/postres-4.jpg">
+                <img src="img/productos/postres.jpg" alt="Postres Individuales" class="carousel-img">
+                <button class="prev-btn" aria-label="Imagen anterior">&#10094;</button>
+                <button class="next-btn" aria-label="Siguiente imagen">&#10095;</button>
+            </div>
+            <h3>Postres Individuales</h3>
+            <p>Perfectos para antojos o celebraciones pequeñas.</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="category-card">
+            <div class="card-carousel" data-images="img/productos/sin-azucar.jpg, img/productos/sin-azucar-2.jpg">
+                <img src="img/productos/sin-azucar.jpg" alt="Línea Saludable" class="carousel-img">
+                <button class="prev-btn" aria-label="Imagen anterior">&#10094;</button>
+                <button class="next-btn" aria-label="Siguiente imagen">&#10095;</button>
+            </div>
+            <h3>Sin Azúcar / Vegan</h3>
+            <p>Opciones deliciosas adaptadas a tus necesidades.</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- SECCIÓN SOBRE NOSOTROS (BREVE) -->
+    <section class="about-preview">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2>Pasión por la Repostería</h2>
+                <p>En Pastelería La Creme De La Creme seleccionamos los mejores ingredientes para ofrecerte calidad y frescura en cada pastel.</p>
+                <a href="nosotros.html" class="btn btn-link">Conoce más sobre nosotros &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>La Creme De La Creme</h3>
+                <p>Calidad y sabor en cada receta.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin_home.html">Acceso Administrativo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal 123, Santiago</p>
+                <p>📧 contacto@duoc.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pastelería La Creme De La Creme. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Opcional: Para cargar el contador dinámico del carrito globalmente -->
+    <script src="js/carrito.js"></script>
+    <script src="js/carrusel-home.js"></script>
+    
+</body>
+</html>
