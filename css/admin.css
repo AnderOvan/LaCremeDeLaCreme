@@ -1,14 +1,14 @@
-.titulo{
-    text-align: center;
-    font-size: 34px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.texto{
-    text-align: center;
-    font-size: 22px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.diseno{
+.diseno_barra_lateral{
     display: flex;
     min-height: 100vh;
 }
@@ -17,11 +17,17 @@
     background-color: #2b2026;
     color: white;
     padding: 20px;
-    width: 250px;
+    width: 350px;
 }
 
-.contenido{
-    flex: 1
+.barralateral button:hover{
+    background-color: #3b2b33;
+}
+
+.diseno_contenido_principal{
+    flex: 1;
+    padding: 40px;
+    background-color: #f7f3f5;
 }
 
 .barralateral button{
@@ -29,3 +35,4 @@
     padding: 12px;
     margin-bottom: 8px;
 }
+

@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='es'>
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Page Title</title>
+    <title>Panel Administrativo</title>
     <link rel='stylesheet' href='../css/admin.css'>
 </head>
+<script src="../js/admin.js"></script>
 <body>
-    <h1 class="titulo"> Panel de Administración </h1>
-    
-    <p> Bienvenido al panel administrativo </p>
+    <div class="diseno_barra_lateral"> 
+
+        <aside class="barralateral"> 
+
+            <h2>La Créme De La Créme</h2>
+            <nav>
+                <button onclick="mostrarSeccion('inicio')"> Inicio </button>
+                <button onclick="mostrarSeccion('productos')"> Productos </button>
+                <button onclick="mostrarSeccion('pedidos')"> Pedidos </button>
+                <button onclick="mostrarSeccion('clientes')"> Clientes </button>
+                <button onclick="mostrarSeccion('config')"> Configuracion </button>
+            </nav>
+
+        </aside>
+
+        <main class="diseno_contenido_principal"> 
+
+            <p>Panel administrativo de La Créme de la créme</p>
+
+            <section id="inicio">
+                <h1>Panel Administrativo</h1>
+
+                <p>
+                    Inicio
+                </p>
+
+
+            </section>
+
+            <section id="productos">  
+                <h1>Productos</h1>
+
+                <p>
+                    Administración de los productos
+                </p>
+
+            </section>
+
+            <section id="pedidos">
+                <h1>Pedidos</h1>
+
+                <p>
+                    Administración de pedidos
+                </p>
+
+            </section>
+
+            <section id="clientes">
+                <h1>Clientes</h1>
+
+                <p>
+                    Administración de clientes
+                </p>
+
+            </section>
+
+            <section id="config">
+                <h1>Configuración</h1>
+
+                <p>Menú de configuración</p>
+
+            </section>
+
+        </main>
+
+    </div>
+
 </body>
+
 </html>
