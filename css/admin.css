@@ -33,7 +33,8 @@ body {
     width: 350px;
 }
 
-.barralateral button {
+.boton_menu {
+    display: block;
     width: 100%;
     padding: 12px;
     margin-bottom: 8px;
@@ -41,19 +42,36 @@ body {
     border: none;
     background: none;
     color: #f7f3f5;
-    
+
     font-size: 16px;
     font-family: cursive;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.barralateral button:hover{
+.boton_menu:hover {
     background-color: #3b2b33;
 }
 
-.barralateral button{
+.boton_pag_principal {
+    display: block;
     width: 100%;
     padding: 12px;
-    margin-bottom: 8px;
+    margin-top: 500px;
+
+    border: none;
+    background: none;
+    color: #f7f3f5;
+
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton_pag_principal:hover {
+    background-color: #3b2b33;
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -66,10 +84,6 @@ body {
     background-color: #fef3c7;
 }
 
-.diseno_contenido_principal section{
-    display: none;
-}
-
 .titulo_seccion {
     width: calc(100% + 80px);
     margin-left: -40px;
@@ -77,10 +91,6 @@ body {
     padding:  20px 40px 30px;
     background-color: rgb(250, 245, 228);
     border-bottom: 2px solid rgb(247, 234, 183);
-}
-
-#inicio{
-    display: block; 
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -98,10 +108,8 @@ body {
 }
 
 .panel_secundario {
-    width: 35%;
-
+    flex: 1;
     padding: 25px;
-    margin-bottom: 40px;
     background-color: rgb(250, 245, 228);
     border:  2px solid rgb(247, 234, 183);
     border-radius: 15px;
@@ -140,10 +148,13 @@ body {
     font-size: 14px;
 }
 
-.titulo_opcion {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.encabezado_opcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    color: #3f332a;
 }
 
 .icono {
@@ -156,5 +167,152 @@ body {
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
+/*=-=-=-=-=-=-=Botón genérico=-=-=-=-=-=-=*/
+
+.boton_principal {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2b2026;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton_principal:hover {
+    background-color: #3b2b33;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/*=-=-=-=-=-=-=-= Tablas =-=-=-=-=-=-=-=*/
+
+.contenedor_tabla {
+    width: 100%;
+    overflow-x: auto;
+    background-color: rgb(250, 245, 228);
+    border: 2px solid rgb(247, 234, 183);
+    border-radius: 15px;
+}
+
+/*=-=-=-=-=-=-=-= Filas =-=-=-=-=-=-=-=*/
+
+.fila_tabla {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1.3fr
+        1fr
+        0.7fr
+        1fr
+        1.8fr;
+
+    align-items: center;
+
+    padding: 16px 20px;
+
+    border-bottom: 1px solid rgb(247, 234, 183);
+}
 
 
+.fila_tabla:last-child {
+    border-bottom: none;
+}
+
+
+/*=-=-=-=-=-=-=-= Encabezado =-=-=-=-=-=-=-=*/
+
+.encabezado_tabla {
+
+    background-color: rgb(250, 245, 228);
+
+    font-weight: bold;
+
+    color: #3b2b33;
+
+    border-bottom: 2px solid rgb(247, 234, 183);
+}
+
+
+/*=-=-=-=-=-=-=-= Textos =-=-=-=-=-=-=-=*/
+
+.fila_tabla p {
+    margin: 0;
+
+    color: #3b2b33;
+
+    font-size: 14px;
+}
+
+
+/*=-=-=-=-=-=-=-= Acciones =-=-=-=-=-=-=-=*/
+
+.acciones_tabla {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.boton_accion {
+    padding: 7px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+.editar {
+    background-color: #eee3b9;
+}
+
+
+.eliminar {
+    background-color: #efd4d4;
+}
+
+
+/*=-=-=-=-=-=-=-= Estados =-=-=-=-=-=-=-=*/
+
+.estado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.disponible {
+    background-color: #d9f0dc;
+    color: #397044;
+}
+
+.agotado {
+    background-color: #f5d6d6;
+    color: #8a3d3d;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/*=-=-=-=-=-=Estados-=-=-=-=-=-=-=-=-=*/
+
+.pendiente {
+    background-color: #f5e8c5;
+    color: #806d32;
+}
+
+.preparando {
+    background-color: #d8e6f5;
+    color: #416887;
+}
+
+.completado {
+    background-color: #d9f0dc;
+    color: #397044;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
