@@ -3,6 +3,7 @@ Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantenga
 ---
 
 ### 👤 **Integrante 1: Tienda Pública e Informativas (Validaciones de Usuarios y Contacto)**
+
 **Enfoque:** Vistas informativas del cliente, autenticación y contacto.
 
 * **Páginas HTML a su cargo (8 vistas):**
@@ -23,6 +24,7 @@ Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantenga
 ---
 
 ### 👤 **Integrante 2: Módulo Catálogo, Carrito de Compras y LocalStorage**
+
 **Enfoque:** Lógica del negocio principal de la pastelería y persistencia de datos.
 
 * **Páginas HTML a su cargo (3 vistas):**
@@ -39,6 +41,7 @@ Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantenga
 ---
 
 ### 👤 **Integrante 3: Sistema Administrativo y Mantenedores**
+
 **Enfoque:** Panel de control privado para la gestión de productos y usuarios de la pastelería.
 
 * **Páginas HTML a su cargo (7 vistas):**
@@ -74,6 +77,7 @@ Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantenga
 De acuerdo con la pauta y los diagramas oficiales del proyecto, las páginas que incluyen **formularios con validaciones** o **lógica dinámica** (carrito, catálogo y combos dependientes) son:
 
 #### **Vistas de la Tienda Pública**
+
 * **`registro.html`**: Requiere JS para validar el RUN (sin puntos ni guión, de 7 a 9 caracteres), correo con dominios permitidos (`@duoc.cl`, `@profesor.duoc.cl`, `@gmail.com`), contraseña, dirección y la carga dinámica de regiones y comunas.
 * **`login.html`**: Requiere JS para validar el formato de correo permitido y que la contraseña tenga entre 4 y 10 caracteres.
 * **`contacto.html`**: Requiere JS para validar los campos obligatorios de nombre, correo permitido y comentario (máximo 500 caracteres).
@@ -82,6 +86,7 @@ De acuerdo con la pauta y los diagramas oficiales del proyecto, las páginas que
 * **`carrito.html`**: Requiere JS para la lógica de modificar cantidades, eliminar productos, calcular totales y **conservar la información mediante `localStorage`** (`JSON.stringify` y `JSON.parse`).
 
 #### **Vistas del Área Administrativa**
+
 * **`admin-nuevo-producto.html` / `admin-editar-producto.html`**: Requieren JS para validar el código de producto (mínimo 3 caracteres), nombre, precio (mínimo 0), stock (entero), stock crítico y categoría obligatoria.
 * **`admin-nuevo-usuario.html` / `admin-editar-usuario.html`**: Requieren JS para validar RUN, nombres, apellidos, correo restringido, tipo de usuario (rol), dirección y la selección interactiva de región y comuna.
 
@@ -90,6 +95,7 @@ De acuerdo con la pauta y los diagramas oficiales del proyecto, las páginas que
 ### 2. Páginas HTML que NO requieren JavaScript (Estáticas)
 
 Estas páginas corresponden a secciones meramente informativas o paneles de visualización simple, por lo que **no necesitan un script propio**:
+
 * **`index.html`** (Página principal/Home)
 * **`nosotros.html`** (Información de la pastelería)
 * **`blog.html`**, **`detalle-blog-1.html`** y **`detalle-blog-2.html`** (Noticias de la tienda)
@@ -143,5 +149,3 @@ pasteleria-dss/
 ├── admin-nuevo-usuario.html         # Crear usuario (usa validaciones-admin.js y regiones-comunas.js)
 └── admin-editar-usuario.html        # Editar usuario (usa validaciones-admin.js y regiones-comunas.js)
 ```
-
-🧁 ¿Deseas que preparemos las reglas de validación específicas en código JS para el formulario de registro de usuario o las funciones base para guardar y leer el carrito en `localStorage`?

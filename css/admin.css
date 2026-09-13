@@ -1,3 +1,5 @@
+/*=-=-=Configuración General para HTML=-=-=*/
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +10,20 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+
+/*=-=Diseño para barra lateral izquierda=-=*/
 .diseno_barra_lateral{
     display: flex;
     min-height: 100vh;
+}
+
+.titulo_bl{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-family: cursive
 }
 
 .barralateral{
@@ -20,14 +33,21 @@ body {
     width: 350px;
 }
 
-.barralateral button:hover{
-    background-color: #3b2b33;
+.barralateral button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+
+    border: none;
+    background: none;
+    color: #f7f3f5;
+    
+    font-size: 16px;
+    font-family: cursive;
 }
 
-.diseno_contenido_principal{
-    flex: 1;
-    padding: 40px;
-    background-color: #f7f3f5;
+.barralateral button:hover{
+    background-color: #3b2b33;
 }
 
 .barralateral button{
@@ -35,4 +55,106 @@ body {
     padding: 12px;
     margin-bottom: 8px;
 }
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/*=-=-=Diseño para contenido principal=-=-=*/
+
+.diseno_contenido_principal{
+    flex: 1;
+    padding: 40px;
+    background-color: #fef3c7;
+}
+
+.diseno_contenido_principal section{
+    display: none;
+}
+
+.titulo_seccion {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-top: -40px;
+    padding:  20px 40px 30px;
+    background-color: rgb(250, 245, 228);
+    border-bottom: 2px solid rgb(247, 234, 183);
+}
+
+#inicio{
+    display: block; 
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/*=-=-=-=-=-=-= Diseño Paneles=-=-=-=-=-=-=*/
+
+.panel_principal {
+    width: 100%;
+    margin-top: 40px;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: rgb(250, 245, 228);
+    border:  2px solid rgb(247, 234, 183);
+    border-radius: 25px;
+}
+
+.panel_secundario {
+    width: 35%;
+
+    padding: 25px;
+    margin-bottom: 40px;
+    background-color: rgb(250, 245, 228);
+    border:  2px solid rgb(247, 234, 183);
+    border-radius: 15px;
+}
+
+.panel_acceso {
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(250, 245, 228);
+    border:  2px solid rgb(247, 234, 183);
+    border-radius: 15px;
+}
+
+.contenedor_paneles {
+    display: flex;
+    gap: 20px;
+}
+
+.titulo_panel {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/*=-=-=-=-=-=Diseño para textos=-=-=-=-=-=*/
+
+.bold {
+    font-weight: bold;
+    color: #3b2b33;
+}
+
+.textgris {
+    color: rgb(170, 168, 159);
+    font-size: 14px;
+}
+
+.titulo_opcion {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.icono {
+    width: 10%;
+    padding: 10px;
+    background-color: #fef3c7;
+    border-radius: 10px;
+    border: 2px solid rgb(247, 234, 183);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+
 
