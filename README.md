@@ -1,5 +1,3 @@
-del
-
 # La Créme De La Créme
 
 ## Sistema Administrativo
