@@ -1,4 +1,3 @@
-del
 
 # La Créme De La Créme
 
@@ -21,7 +20,6 @@ Como tercer integrante soy el encargado del desarrollo y mantenimiento del **ár
 Este módulo se encuentra separado de la tienda pública y utiliza una estructura de páginas independientes para cada sección del panel
 
 (siendo 5 htmls distintos que hacen la función visual de cada panel dentro del sistema administrativo).
-
 
 A futuro seré el encargado de configurar admin.js y también de crear la base de datos para LaCrémeDeLaCréme en donde probablemente se trabaje con java y sql, es por eso que actualmente no se dispone de un html o un panel encargado de inicio de sesión de los trabajadores de LaCrémeDeLaCréme ya que requiero de datos reales de usuarios para poder hacerlo funcionar.
 
