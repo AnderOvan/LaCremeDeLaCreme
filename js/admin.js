@@ -28,6 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(productos);
 
+    const btnAgregarProducto = document.getElementById("btnAgregarProducto");
+    const formularioProducto = document.getElementById("formularioProducto");
+    btnAgregarProducto.addEventListener("click", function () {
+    formularioProducto.style.display = "block";
+    });
+
+    const formProducto = document.getElementById("formProducto");
+
+    formProducto.addEventListener("submit", function (evento) {
+
+    evento.preventDefault();
+
+    const nombre = document.getElementById("nombreProducto").value;
+    const categoria = document.getElementById("categoriaProducto").value;
+    const precio = Number(document.getElementById("precioProducto").value);
+    const stock = Number(document.getElementById("stockProducto").value);
+
+    console.log(nombre);
+    console.log(categoria);
+    console.log(precio);
+    console.log(stock);
+
+    });
+
+
+
     function mostrarProductos() {
 
     const listaProductos = document.getElementById("listaProductos");
