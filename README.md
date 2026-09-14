@@ -1,11 +1,9 @@
----
+# 🧁 Módulo de Autenticación, Validaciones y Contenido — Rama Personal
 
 ## 👨‍💻 Responsabilidad y Alcance del Integrante
 
-**Integrante 1:** Matías Currín
-
-**Repositorio Principal:** [https://github.com/AnderOvan/LaCremeDeLa Creme.git](https://github.com/AnderOvan/LaCremeDeLaCreme.git)
-
+**Integrante 1:** Matías Currín  
+**Repositorio Principal:** [https://github.com/AnderOvan/LaCremeDeLaCreme.git](https://github.com/AnderOvan/LaCremeDeLaCreme.git)  
 **Enfoque:** Vistas informativas del cliente, autenticación y contacto.
 
 ### 📄 Páginas HTML a su cargo (8 vistas):
@@ -23,10 +21,14 @@
 ### ⚙️ Archivo JS a su cargo:
 
 * **`js/validaciones-tienda.js`:** Lógica de validación del lado del cliente para los formularios de Registro, Login y Contacto:
-* **Correo restringido:** Validación exclusiva para dominios `@duoc.cl`, `@profesor.duoc.cl` o `@gmail.com`.
-* **RUN (Chile):** Control de formato numérico/K sin puntos ni guion (de 7 a 9 caracteres).
-* **Contraseñas y Mensajes:** Validación de claves entre 4 y 10 caracteres y control de longitud para comentarios de contacto (máximo 500 caracteres).
-* **Carga Geográfica:** Integración y conexión con `js/regiones-comunas.js` en la vista de registro para la selección dependiente de ubicación.
+  * **Correo restringido:** Validación exclusiva para dominios `@duoc.cl`, `@profesor.duoc.cl` o `@gmail.com`.
+  * **RUN (Chile):** Control de formato numérico/K sin puntos ni guion (de 7 a 9 caracteres).
+  * **Contraseñas y Mensajes:** Validación de claves entre 4 y 10 caracteres y control de longitud para comentarios de contacto (máximo 500 caracteres).
+  * **Carga Geográfica:** Integración y conexión con `js/regiones-comunas.js` en la vista de registro para la selección dependiente de ubicación.
+
+---
+
+## 🛠️ Detalle Técnico de Módulos Desarrollados
 
 ### 1. Sistema de Validaciones de Negocio (`js/validaciones-tienda.js`)
 
@@ -82,13 +84,3 @@ Diseñé el módulo geográfico dependiente para la selección de dirección en 
 ├── detalle-blog-1.html         # Artículo de lectura 1
 ├── detalle-blog-2.html         # Artículo de lectura 2
 └── detalle-blog-3.html         # Artículo de lectura 3
-
-```
-
----
-
-## 🚀 Cómo Probar mis Componentes
-
-1. Clonar esta rama o descargar los archivos.
-2. Abrir `login.html` o `registro.html` en el navegador para probar las validaciones de campo vacíos, correo restringido, contraseña y selección dependiente de Región/Comuna.
-3. Navegar a `detalle-blog-1.html`, `detalle-blog-2.html` o `detalle-blog-3.html` para visualizar el diseño adaptativo y estructurado de las noticias del blog.
