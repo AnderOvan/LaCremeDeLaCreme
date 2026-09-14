@@ -1,14 +1,38 @@
-# 🧁 Módulo de Autenticación, Validaciones y Contenido 
+Integrante 1: Matías Currín
 
-**Integrante 1:** Matías Currín
+Repositorio Principal: https://github.com/AnderOvan/LaCremeDeLa Creme.git
 
-**Repositorio Principal:** [https://github.com/AnderOvan/LaCremeDeLaCreme.git](https://github.com/AnderOvan/LaCremeDeLaCreme.git)
+Enfoque: Vistas informativas del cliente, autenticación y contacto.
 
-Este repositorio/rama contiene los desarrollos y módulos del frontend asignados a mi rol en el proyecto **La Creme De La Creme**. Mi aporte se centró en la lógica de negocio cliente, validaciones de formularios con JavaScript ES6+, maquetación de autenticación y desarrollo de contenido para el blog.
+📄 Páginas HTML a su cargo (8 vistas):
+index.html: Página principal / Home de la pastelería.
 
----
+nosotros.html: Información institucional, historia y equipo de trabajo.
 
-## 🛠️ Mis Aportes y Módulos Desarrollados
+blog.html: Sección general de noticias y artículos del rubro.
+
+detalle-blog-1.html: Vista de lectura completa "Los 5 Secretos para un Bizcocho Perfecto".
+
+detalle-blog-2.html: Vista de lectura completa "Lanzamiento Línea Saludable y Vegan".
+
+detalle-blog-3.html: Vista de lectura completa "Maridar Postres con Café de Especialidad".
+
+contacto.html: Formulario de consultas e información de atención.
+
+login.html: Interfaz de inicio de sesión de clientes.
+
+registro.html: Formulario de creación de cuenta para nuevos clientes.
+
+⚙️ Archivo JS a su cargo:
+js/validaciones-tienda.js: Lógica de validación del lado del cliente para los formularios de Registro, Login y Contacto:
+
+Correo restringido: Validación exclusiva para dominios @duoc.cl, @profesor.duoc.cl o @gmail.com.
+
+RUN (Chile): Control de formato numérico/K sin puntos ni guion (de 7 a 9 caracteres).
+
+Contraseñas y Mensajes: Validación de claves entre 4 y 10 caracteres y control de longitud para comentarios de contacto (máximo 500 caracteres).
+
+Carga Geográfica: Integración y conexión con js/regiones-comunas.js en la vista de registro para la selección dependiente de ubicación.
 
 ### 1. Sistema de Validaciones de Negocio (`js/validaciones-tienda.js`)
 
