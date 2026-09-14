@@ -1,33 +1,40 @@
 # La Créme De La Créme
 
-## Proyecto Web – Pastelería La Créme De La Créme
+## Descripción
 
-Proyecto desarrollado para la creación de una tienda web de pastelería utilizando HTML, CSS y JavaScript.
+**La Créme De La Créme** es un sitio web para una pastelería, desarrollado como proyecto académico de **Desarrollo Full Stack II**.
 
-El proyecto contempla una tienda pública para los clientes y un área administrativa para la gestión interna del negocio.
+La versión actual corresponde principalmente a una implementación **Front-End**, desarrollada utilizando:
+
+- **HTML5** para la estructura de las vistas.
+- **CSS3** para estilos y presentación.
+- **JavaScript** para validaciones, interacción, catálogo, carrito y administración.
+- **localStorage** para persistir información directamente en el navegador.
+
+En esta etapa no se utiliza un backend, una base de datos ni autenticación real. Estas funcionalidades quedan contempladas para etapas posteriores del proyecto.
 
 ---
 
 # 👥 Integrantes y distribución del proyecto
 
-El proyecto fue dividido entre tres integrantes, cada uno encargado de un área principal del sistema.
+El proyecto fue desarrollado de manera colaborativa mediante ramas y commits individuales. Cada integrante tuvo un área principal de responsabilidad.
 
 ## 👤 Alejandro Rodriguez
 
-Encargado principalmente del desarrollo de la **tienda pública y las vistas informativas** del sitio.
+**Área principal:** tienda pública, interfaces informativas y validaciones.
 
 ### Responsabilidades
 
 - Página principal de la tienda.
-- Sección de productos y navegación pública.
-- Página de nosotros.
-- Página de contacto.
+- Información de la pastelería.
+- Página Nosotros.
+- Página Contacto.
 - Registro de usuarios.
 - Inicio de sesión.
-- Vistas informativas del sitio.
-- Validaciones correspondientes a la tienda.
-- Integración visual y navegación de las páginas públicas.
-- Desarrollo y mantenimiento de los componentes relacionados con la experiencia del usuario en la tienda.
+- Blog y contenido informativo.
+- Validaciones de formularios de la tienda.
+- Integración de regiones y comunas.
+- Apoyo en navegación y estructura visual de las páginas públicas.
 
 ### Archivos y áreas relacionadas
 
@@ -37,14 +44,7 @@ nosotros.html
 contacto.html
 registro.html
 login.html
-
-css/
-├── styles.css
-├── layout.css
-├── variables.css
-└── ...
+blog.html
 
 js/
-├── validaciones-tienda.js
-├── comunas-regiones.js
-└── regiones-comunas.js
+└── validaciones-tienda.js
