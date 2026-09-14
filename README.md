@@ -110,7 +110,7 @@ El historial de GitHub permite identificar las contribuciones individuales de ca
 
 ---
 
-# 🛒 Funcionalidades actuales
+# Funcionalidades actuales
 
 ## Tienda pública
 
