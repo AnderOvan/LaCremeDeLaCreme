@@ -2,7 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Panel administrativo cargado correctamente.");
 
-    let productos = [
+
+    // ==============================
+    // PRODUCTOS
+    // ==============================
+
+    let productos = JSON.parse(localStorage.getItem("productos")) || [
         {
             id: 1,
             nombre: "Pastel mil hojas",
@@ -26,87 +31,152 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    console.log(productos);
+
+    // ==============================
+    // ELEMENTOS DEL FORMULARIO
+    // ==============================
 
     const btnAgregarProducto = document.getElementById("btnAgregarProducto");
     const formularioProducto = document.getElementById("formularioProducto");
+    const formProducto = document.getElementById("formProducto");
+
+    // ==============================
+    // MOSTRAR FORMULARIO
+    // ==============================
+
     btnAgregarProducto.addEventListener("click", function () {
-    formularioProducto.style.display = "block";
+        formularioProducto.style.display = "block";
     });
 
-    const formProducto = document.getElementById("formProducto");
+
+    // ==============================
+    // MOSTRAR PRODUCTOS
+    // ==============================
+
+    function mostrarProductos() {
+        const listaProductos = document.getElementById("listaProductos");
+        listaProductos.innerHTML = "";
+        productos.forEach(function (producto) {
+            let estado;
+            if (producto.stock > 0) {
+                estado = `
+                    <span class="estado disponible">
+                        Disponible
+                    </span>
+                `;
+            } else {
+                estado = `
+                    <span class="estado agotado">
+                        Agotado
+                    </span>
+                `;
+            }
+
+
+            listaProductos.innerHTML += `
+                <div class="fila_tabla">
+                    <p>${producto.nombre}</p>
+                    <p>${producto.categoria}</p>
+                    <p>$${producto.precio.toLocaleString("es-CL")}</p>
+                    <p>${producto.stock}</p>
+                    <p>${estado}</p>
+                    <div class="acciones_tabla">
+
+                        <button class="boton_accion editar">
+                            Editar
+                        </button>
+
+                        <button class="boton_accion eliminar">
+                            Eliminar
+                        </button>
+
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+
+    // ==============================
+    // GUARDAR PRODUCTO
+    // ==============================
 
     formProducto.addEventListener("submit", function (evento) {
 
-    evento.preventDefault();
+        evento.preventDefault();
 
-    const nombre = document.getElementById("nombreProducto").value;
-    const categoria = document.getElementById("categoriaProducto").value;
-    const precio = Number(document.getElementById("precioProducto").value);
-    const stock = Number(document.getElementById("stockProducto").value);
+        const nombre = document.getElementById("nombreProducto").value.trim();
+        const categoria = document.getElementById("categoriaProducto").value.trim();
+        const precio = Number(
+            document.getElementById("precioProducto").value
+        );
 
-    console.log(nombre);
-    console.log(categoria);
-    console.log(precio);
-    console.log(stock);
-
-    });
+        const stock = Number(
+            document.getElementById("stockProducto").value
+        );
 
 
+        // ==============================
+        // VALIDACIONES
+        // ==============================
 
-    function mostrarProductos() {
-
-    const listaProductos = document.getElementById("listaProductos");
-
-    listaProductos.innerHTML = "";
-
-    productos.forEach(function(producto) {
-
-        let estado;
-
-        if (producto.stock > 0) {
-            estado = `
-                <span class="estado disponible">
-                    Disponible
-                </span>
-            `;
-        } else {
-            estado = `
-                <span class="estado agotado">
-                    Agotado
-                </span>
-            `;
+        if (nombre === "") {
+        alert("El nombre del producto es obligatorio.");
+        return;
         }
 
-        listaProductos.innerHTML += `
-            <div class="fila_tabla">
+        if (categoria === "") {
+        alert("La categoría del producto es obligatoria.");
+        return;
+        }
 
-                <p>${producto.nombre}</p>
+        if (precio <= 0) {
+        alert("El precio debe ser mayor que $0.");
+        return;
+        }
 
-                <p>${producto.categoria}</p>
+        if (stock < 0) {
+        alert("El stock no puede ser negativo.");
+        return;
+        }
 
-                <p>$${producto.precio.toLocaleString("es-CL")}</p>
 
-                <p>${producto.stock}</p>
+        // ==============================
+        // CREAR PRODUCTO
+        // ==============================
+        const nuevoProducto = {
+            id: productos.length + 1,
+            nombre: nombre,
+            categoria: categoria,
+            precio: precio,
+            stock: stock
+        };
 
-                <p>${estado}</p>
+        // Agregar al array
+        productos.push(nuevoProducto);
 
-                <div class="acciones_tabla">
-                    <button class="boton_accion editar">
-                        Editar
-                    </button>
+        // Guardar en localStorage
+        localStorage.setItem(
+            "productos",
+            JSON.stringify(productos)
+        );
 
-                    <button class="boton_accion eliminar">
-                        Eliminar
-                    </button>
-                </div>
 
-            </div>
-        `;
+        // Actualizar tabla
+        mostrarProductos();
+
+        // Limpiar formulario
+        formProducto.reset();
+
+        // Limpiar mensaje
+        mensajeError.textContent = "";
+
+        // Ocultar formulario
+        formularioProducto.style.display = "none";
     });
 
-    }
 
+    // Mostrar productos al cargar
     mostrarProductos();
 
 });
