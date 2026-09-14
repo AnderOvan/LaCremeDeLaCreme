@@ -296,9 +296,6 @@ body {
     color: #8a3d3d;
 }
 
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-
-/*=-=-=-=-=-=Estados-=-=-=-=-=-=-=-=-=*/
 
 .pendiente {
     background-color: #f5e8c5;
@@ -313,6 +310,16 @@ body {
 .completado {
     background-color: #d9f0dc;
     color: #397044;
+}
+
+.selector_estado {
+    padding: 6px 10px;
+    border: 1px solid rgb(247, 234, 183);
+    border-radius: 8px;
+    background-color: rgb(250, 245, 228);
+    color: #3b2b33;
+    cursor: pointer;
+    font-size: 13px;
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
