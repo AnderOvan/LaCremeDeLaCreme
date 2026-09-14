@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Creme De La Creme - Carrito de Compras</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo La Creme De La Creme">
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                <a href="carrito.html" class="cart-icon active" aria-label="Ver carrito">
+                    🛒 <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Tu Carrito de Compras</h1>
+            <p>Revisa tus productos seleccionados antes de proceder al pago.</p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO DEL CARRITO -->
+    <section class="container cart-section">
+        
+        <!-- Estado Vacío -->
+        <div id="cart-empty-msg" class="cart-empty" style="display: none;">
+            <p>🛒 Tu carrito está actualmente vacío.</p>
+            <a href="productos.html" class="btn btn-primary">Explorar Catálogo</a>
+        </div>
+
+        <!-- Tabla y Resumen -->
+        <div id="cart-wrapper" class="cart-grid">
+            <div class="cart-table-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                        <!-- Filas renderizadas por JS -->
+                    </tbody>
+                </table>
+
+                <div class="cart-actions-bar">
+                    <button id="btn-clear-cart" class="btn btn-danger-outline">Vaciar Carrito</button>
+                    <a href="productos.html" class="btn btn-secondary">Seguir Comprando</a>
+                </div>
+            </div>
+
+            <!-- Resumen de Pago -->
+            <div class="cart-summary-card">
+                <h3>Resumen de la Orden</h3>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal">$0</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Envío</span>
+                    <span>Calculado en checkout</span>
+                </div>
+                <hr>
+                <div class="summary-line total-line">
+                    <span>Total</span>
+                    <strong id="cart-total">$0</strong>
+                </div>
+                <button onclick="alert('Funcionalidad de Checkout en desarrollo')" class="btn btn-primary btn-block">Proceder al Pago</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>La Creme De La Creme</h3>
+                <p>Calidad y sabor en cada receta.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-home.html">Acceso Administrativo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal 123, Santiago</p>
+                <p>📧 contacto@duoc.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pastelería La Creme De La Creme. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Creme De La Creme - Catálogo de Productos</title>
+    <!-- Hoja de estilos global -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO / NAVEGACIÓN -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo La Creme De La Creme">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                <a href="carrito.html" class="cart-icon" aria-label="Ver carrito de compras">
+                    🛒 <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEADER DE SECCIÓN -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestras Creaciones</h1>
+            <p>Explora nuestro catálogo completo de repostería artesanal elaborada diariamente.</p>
+        </div>
+    </section>
+
+    <!-- FILTROS Y BÚSQUEDA -->
+    <section class="catalog-section container">
+        <div class="catalog-toolbar">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar por nombre o ingrediente...">
+            </div>
+            <div class="filter-box">
+                <select id="category-filter">
+                    <option value="todos">Todas las Categorías</option>
+                    <option value="tradicionales">Tortas Tradicionales</option>
+                    <option value="postres">Postres Individuales</option>
+                    <option value="saludables">Sin Azúcar / Vegan</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- GRILLA DE PRODUCTOS -->
+        <div class="product-grid" id="product-grid">
+            
+            <!-- Producto 1 -->
+            <article class="product-card" data-category="tradicionales">
+                <div class="card-image">
+                    <span class="badge">Destacado</span>
+                    <img src="img/productos/tresleches.jpg" alt="Torta Tres Leches">
+                </div>
+                <div class="card-content">
+                    <span class="product-category">Tortas Tradicionales</span>
+                    <h3 class="product-title">Torta Tres Leches</h3>
+                    <p class="product-desc">Bizcocho tradicional remojado en tres leches con merengue dorado.</p>
+                    <div class="card-footer">
+                        <span class="product-price">$18.990</span>
+                        <div class="card-actions">
+                            <a href="detalle-producto.html?id=1" class="btn btn-secondary btn-sm">Detalle</a>
+                            <button class="btn btn-primary btn-sm btn-add-cart" data-id="1">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="product-card" data-category="tradicionales">
+                <div class="card-image">
+                    <img src="img/productos/selvanegra.jpeg" height="500" alt="Torta Selva Negra">
+                </div>
+                <div class="card-content">
+                    <span class="product-category">Tortas Tradicionales</span>
+                    <h3 class="product-title">Torta Selva Negra</h3>
+                    <p class="product-desc">Bizcocho de chocolate, relleno de crema chantilly y macerado de cerezas.</p>
+                    <div class="card-footer">
+                        <span class="product-price">$21.500</span>
+                        <div class="card-actions">
+                            <a href="detalle-producto.html?id=2" class="btn btn-secondary btn-sm">Detalle</a>
+                            <button class="btn btn-primary btn-sm btn-add-cart" data-id="2">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="product-card" data-category="postres">
+                <div class="card-image">
+                    <img src="img/productos/pie de limon.jpg" alt="Pie de Limón">
+                </div>
+                <div class="card-content">
+                    <span class="product-category">Postres Individuales</span>
+                    <h3 class="product-title">Pie de Limón Individual</h3>
+                    <p class="product-desc">Base crujiente sablée, crema ácida de limón natural y merengue suizo.</p>
+                    <div class="card-footer">
+                        <span class="product-price">$3.500</span>
+                        <div class="card-actions">
+                            <a href="detalle-producto.html?id=3" class="btn btn-secondary btn-sm">Detalle</a>
+                            <button class="btn btn-primary btn-sm btn-add-cart" data-id="3">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="product-card" data-category="saludables">
+                <div class="card-image">
+                    <span class="badge badge-health">Sin Azúcar</span>
+                    <img src="img/productos/chiskake.jpg" alt="Cheesecake Frutos Rojos">
+                </div>
+                <div class="card-content">
+                    <span class="product-category">Sin Azúcar / Vegan</span>
+                    <h3 class="product-title">Cheesecake Frutos Rojos</h3>
+                    <p class="product-desc">Preparado con alulosa, base de harina de almendras y coulis artesanal.</p>
+                    <div class="card-footer">
+                        <span class="product-price">$19.990</span>
+                        <div class="card-actions">
+                            <a href="detalle-producto.html?id=4" class="btn btn-secondary btn-sm">Detalle</a>
+                            <button class="btn btn-primary btn-sm btn-add-cart" data-id="4">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>La Creme De La Creme</h3>
+                <p>Calidad y sabor en cada receta.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="admin-home.html">Acceso Administrativo</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal 123, Santiago</p>
+                <p>📧 contacto@duoc.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pastelería La Creme De La Creme. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
