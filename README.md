@@ -15,7 +15,7 @@ En esta etapa **no se utiliza un backend, una base de datos ni autenticación re
 
 ---
 
-# 👥 Distribución del trabajo
+#  Distribución del trabajo
 
 El proyecto se desarrolló de forma colaborativa mediante ramas y commits individuales. Cada integrante tuvo un área principal de responsabilidad.
 
@@ -96,7 +96,7 @@ El área administrativa se mantiene separada de la tienda pública y está prepa
 
 ---
 
-# 🤝 Trabajo transversal del equipo
+# Trabajo transversal del equipo
 
 Aunque cada integrante tuvo un área principal, existen componentes que fueron desarrollados y coordinados de manera conjunta:
 
@@ -151,7 +151,7 @@ El área administrativa permite trabajar con información de productos, pedidos 
 
 ---
 
-# 📁 Organización actual del proyecto
+# Organización actual del proyecto
 
 ```text
 LaCremeDeLaCreme-main/
