@@ -1,46 +1,62 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
+
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Page Title</title>
-    <link rel='stylesheet' href='../css/admin.css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel de clientes</title>
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
+
 <body>
-    <div class="diseno_barra_lateral"> 
 
-        <aside class="barralateral"> 
-
+    <div class="diseno_barra_lateral">
+        <aside class="barralateral">
             <h2 class="titulo_bl">La Créme De La Créme</h2>
+
             <nav>
                 <a href="admin_home.html" class="boton_menu">🏠 Inicio</a>
                 <a href="panel_productos.html" class="boton_menu">🍰 Productos</a>
-                <a href="admin_home.html" class="boton_menu">📦 Pedidos</a>
-                <a href="admin_home.html" class="boton_menu">👤 Clientes</a>
-                <a href="admin_home.html" class="boton_menu">⚙️ Configuración</a>
-                <a href="../index.html" class="boton_pag_principal"><- Volver a la tienda</a>
+                <a href="panel_pedidos.html" class="boton_menu">📦 Pedidos</a>
+                <a href="panel_clientes.html" class="boton_menu">👤 Clientes</a>
+                <a href="panel_config.html" class="boton_menu">⚙️ Configuración</a>
+                <a href="../index.html" class="boton_pag_principal">&lt;- Volver a la tienda</a>
             </nav>
-
         </aside>
 
-        <main class="diseno_contenido_principal"> 
+        <main class="diseno_contenido_principal">
             <p class="titulo_seccion">Administración / Clientes</p>
-                <h1 class="titulo_seccion">Panel Administrativo</h1>
+            <h1 class="titulo_seccion">Panel Administrativo</h1>
+
 
             <div class="encabezado_opcion">
-
                 <div>
                     <p class="bold">Clientes registrados</p>
                     <p class="textgris">Consulta y administra la información de los clientes.</p>
                 </div>
 
-                <button class="boton_principal">+ Agregar cliente</button>
+                <button type="button" id="btnAgregarCliente" class="boton_principal">+ Agregar cliente</button>
+            </div>
 
+            <div id="formularioCliente" style="display: none;">
+                <h2>Agregar cliente</h2>
+
+                <form id="formCliente">
+                    <label for="nombreCliente">Nombre:</label>
+                    <input type="text" id="nombreCliente">
+
+                    <label for="correoCliente">Correo:</label>
+                    <input type="email" id="correoCliente">
+
+                    <label for="telefonoCliente">Teléfono:</label>
+                    <input type="text" id="telefonoCliente">
+
+                    <button type="submit" class="boton_principal">Guardar cliente</button>
+                </form>
             </div>
 
             <div class="contenedor_tabla">
-
-                <div class="fila_tabla">
+                <div class="fila_tabla encabezado_tabla">
                     <p>Nombre</p>
                     <p>Correo</p>
                     <p>Teléfono</p>
@@ -49,63 +65,12 @@
                     <p>Acciones</p>
                 </div>
 
-
-                <div class="fila_tabla">
-                    <p>Juan Pérez</p>
-                    <p>juan@email.com</p>
-                    <p>+56 9 1234 5678</p>
-                    <p>4</p>
-
-                    <p>
-                        <span class="estado disponible">Activo</span>
-                    </p>
-
-                    <div class="acciones_tabla">
-                        <button class="boton_accion editar">Editar</button>
-                        <button class="boton_accion eliminar">Eliminar</button>
-                    </div>
-
-                </div>
-
-
-                <div class="fila_tabla">
-                    <p>María González</p>
-                    <p>maria@email.com</p>
-                    <p>+56 9 8765 4321</p>
-                    <p>7</p>
-
-                    <p>
-                        <span class="estado disponible">Activo</span>
-                    </p>
-
-                    <div class="acciones_tabla">
-                        <button class="boton_accion editar">Editar</button>
-                        <button class="boton_accion eliminar">Eliminar</button>
-                    </div>
-
-                </div>
-
-
-                <div class="fila_tabla">
-                    <p>Pedro Soto</p>
-                    <p>pedro@email.com</p>
-                    <p>+56 9 5555 5555</p>
-                    <p>2</p>
-
-                    <p>
-                        <span class="estado disponible">Activo</span>
-                    </p>
-
-                    <div class="acciones_tabla">
-                        <button class="boton_accion editar">Editar</button>
-                        <button class="boton_accion eliminar">Eliminar</button>
-                    </div>
-
-                </div>
-
+                <div id="listaClientes"></div>
             </div>
+        </main>
+    </div>
 
-            <script src="../js/admin.js"></script>
-    
+    <script src="../js/clientes.js"></script>
 </body>
+
 </html>
