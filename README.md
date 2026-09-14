@@ -1,4 +1,4 @@
-Para que los **3 integrantes** tengan una carga de trabajo equivalente, mantengan orden en GitHub y aseguren evidencias de aportes individuales para la evaluación, aquí tienes la reorganización de los archivos de tu proyecto **`pasteleria-dss/`** distribuida por módulos de responsabilidad:
+
 
 ---
 
